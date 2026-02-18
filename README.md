@@ -1,5 +1,9 @@
 TV1 Instruction Offloader
 
+Disclaimer:
+This project is provided as‑is and is intended only as a sample application to help you get started with building your own TeamViewer DEX instruction runner.
+No warranties, guarantees, or support are provided.
+
 Automated scheduling and export engine for 1E / Tachyon instructions.
 
 TV1 Instruction Offloader executes instructions on a schedule, enforces TTL-based export boundaries, and exports results using:
