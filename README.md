@@ -134,36 +134,6 @@ It includes export queuing, retry handling, restart recovery, execution history 
         Duration values are timezone-neutral
             Note: Some visual adjustments may still be refined withn the charts.
 
-⚠️ Current Known Issues
-
-        1️⃣ Paging File Visibility Timing (Rare / Slow Disk)
-                On slower systems, the paging file may not be immediately visible after completion.
-                Current behavior:
-                Paging success is determined by API completion, not file existence.
-                Transient "WaitingExport" may appear briefly before finalization.
-        
-        2️⃣ History Status Drift After Restart (Rare)
-        
-            Under specific restart timing:
-            A previously completed export may briefly show WaitingExport.
-            Status normalizes on next scheduler tick.
-            Does not affect export correctness.
-        
-        3️⃣ UI Layout Scaling on Some Windows 10 VMs
-        
-            Certain DPI combinations may clip top tab headers.
-            Manual scaling logic was removed to stabilize layout.
-            Some environments may still require layout refinement.
-        
-        4️⃣ Zero-Row Detection (Paging)
-        
-            Currently:
-                Paging success = API call completed
-                Row count is not directly inspected
-                Future enhancement will:
-                Detect zero-row result sets deterministically
-                Mark NoData explicitly from API result
-
 🚀 Planned Enhancements
 
 🔹 1. True Row Count Detection
