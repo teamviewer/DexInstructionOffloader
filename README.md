@@ -16,11 +16,11 @@ It includes export queuing, retry handling, restart recovery, execution history 
 📦 Requirements
 
         .NET 8
-        Windows 11 (primary target) may work withj Mac and Linux as well
+        Windows 11 (primary target) may work with Mac and Linux as well
         Valid DEX platform access
         Export folder write permissions
-        Non-Interactive authorization - cetificate based authentication 
-                JWT Prinipal Mapping setup for a service account with execute and view access to the instructions that will be automated
+        Non-Interactive authorization - certificate based authentication 
+                JWT Principal Mapping setup for a service account with execute and view access to the instructions that will be automated
 
 ✨ Core Features
   🔹 Scheduled Instruction Execution
@@ -47,7 +47,7 @@ It includes export queuing, retry handling, restart recovery, execution history 
     Paging export runs after Instruction TTL ends
     Server-side export polling begins after Instruction TTL ends
     Response TTL is used only for expiration decisions (not export timing)
-    This sohuld ensure:
+    This should ensure:
         Complete datasets
         No partial exports
     Deterministic export windows
@@ -132,7 +132,7 @@ It includes export queuing, retry handling, restart recovery, execution history 
         Chart grouping boundaries (hour/day bucketing)
         Charts recompute when toggled
         Duration values are timezone-neutral
-            Note: Some visual adjustments may still be refined withn the charts.
+            Note: Some visual adjustments may still be refined within the charts.
 
 🚀 Planned Enhancements
 
@@ -175,5 +175,5 @@ It includes export queuing, retry handling, restart recovery, execution history 
         No full UI required
         Export orchestration logic lives inside:
         JobSchedulerService.QueueExport()
-        Maybe create a service but not everyone will have admin access to do this so i left ti as a startup option 
+        Maybe create a service but not everyone will have admin access to do this so I left it as a startup option 
     
